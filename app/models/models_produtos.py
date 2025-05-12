@@ -1,5 +1,5 @@
+from typing import List, Optional  # Adicione Optional
 from pydantic import BaseModel
-from typing import Dict, List, Optional  # Adicione Optional
 
 
 # Modelo base para produto
@@ -12,6 +12,7 @@ class ProdutoBase(BaseModel):
 # Modelo para criar um produto
 class CriarProduto(ProdutoBase):
     pass
+
 
 # Modelo de produto com ID
 class Produto(ProdutoBase):
