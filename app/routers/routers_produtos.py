@@ -27,7 +27,7 @@ def criar_produto(produto: CriarProduto) -> Produto:
 
     Args:
         produto (CriarProduto): O objeto contendo os dados do produto a ser criado.
-        
+
     Returns:
         Produto: O objeto do produto recém-criado com um ID gerado.
     """
@@ -71,6 +71,7 @@ def adicionar_historico_compras(
     Returns:
         dict: Mensagem indicando que o histórico de compras foi atualizado.
     """
+    
     if usuario_id not in [usuario.id for usuario in usuarios]:
         raise HTTPException(status_code=404, detail="Usuário não encontrado")
     historico_de_compras[usuario_id] = compras.produtos_ids
